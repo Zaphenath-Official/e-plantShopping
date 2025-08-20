@@ -297,8 +297,14 @@ function ProductList({ onHomeClick }) {
                                                     <img src={item.image} alt="" className='product-image'/>
                                                     <div className='product-price'>{item.cost}</div>
                                                     <div className='product-description'>{item.description}</div>
-                                                    <button className='product-button' onClick={() => handleAddItem(item)} disabled={cartItems.find(cartItem => cartItem.name === item.name)}>
-                                                        {
+                                                    <button
+                                                    className='product-button'
+                                                    style={{
+                                                        backgroundColor: cartItems.find(cartItem => cartItem.name === item.name) ? '#4CAF50' : 'rgb(47, 49, 47)'
+                                                    }}
+                                                    onClick={() => handleAddItem(item)}
+                                                    disabled={cartItems.find(cartItem => cartItem.name === item.name)}
+                                                    >                                                        {
                                                             cartItems.find(cartItem => cartItem.name === item.name) ? "Added to Cart" : "Add to Cart"
                                                         }
                                                     </button>
