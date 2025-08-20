@@ -300,7 +300,7 @@ function ProductList({ onHomeClick }) {
                                                     <button
                                                     className='product-button'
                                                     style={{
-                                                        backgroundColor: cartItems.find(cartItem => cartItem.name === item.name) ? '#4CAF50' : 'rgb(47, 49, 47)'
+                                                        backgroundColor: cartItems.find(cartItem => cartItem.name === item.name) ? 'rgb(47, 49, 47)' : '#4CAF50'
                                                     }}
                                                     onClick={() => handleAddItem(item)}
                                                     disabled={cartItems.find(cartItem => cartItem.name === item.name)}

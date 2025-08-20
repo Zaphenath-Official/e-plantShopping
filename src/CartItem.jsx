@@ -36,6 +36,10 @@ const CartItem = ({ onContinueShopping }) => {
     return (item.cost * item.quantity).toFixed(2); // Return total cost formatted to 2 decimal places
   };
 
+  const handleCheckoutShopping = (e) => {
+    alert('Functionality to be added for future reference');
+  };
+
   return (
     <div className="cart-container">
       <h2 style={{ color: 'black' }}>Total Cart Amount: ${calculateTotalAmount()}</h2>
